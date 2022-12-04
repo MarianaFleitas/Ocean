@@ -2,12 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 
-
-
 //setings 
 const port = process.env.PORT || 8080;
-
-
 
 // conexión a la base de datos
 const mongoose = require('mongoose');
@@ -19,6 +15,8 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(e => console.log('error de conexión', e))
 
 //rutas
-app.use('/', require('./router/routes'))
+app.use('/', require('./router/routes').default)
+app.use("/cliente", require('./router/routes'));
+
 
 app.listen(port, () => console.log("servidor andando en: 🔥", port));

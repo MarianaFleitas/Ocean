@@ -9,8 +9,7 @@ const clientSchema = new Schema({
 });
 
 
-
 // Crear el modelo
-const client = model('client' , clientSchema);
+const client = mongoose.model('client' , clientSchema);
 
 module.exports = client;
