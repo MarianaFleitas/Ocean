@@ -5,9 +5,9 @@ const entrepreneurshipSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    id_category:[{
+    id_product:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'categoty',
+        ref: 'product',
         require: false
     }],
     id_service:[{

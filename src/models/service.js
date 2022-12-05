@@ -7,7 +7,8 @@ const serviceSchema = mongoose.Schema({
     },
     id_category:{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'categoty'
+        ref: 'category',
+        require: true
     }
 });
 
