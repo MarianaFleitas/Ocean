@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 
 // conexión a la base de datos
 const mongoose = require('mongoose');
-const password = "8IXwNdsWyRGFllCv"
+const password = process.env.PASSWORD
 const uri = `mongodb+srv://ocean_emprendimientos:${password}@ocean.jfe3ji2.mongodb.net/?retryWrites=true&w=majority`;
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
